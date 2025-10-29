@@ -1,0 +1,54 @@
+.flash-message {
+  /* border-radius: 4px; */
+  letter-spacing: 2px;
+  box-shadow: 0 0 40px rgba(255, 30, 86, 0.7);
+  animation: flash 1s infinite; 
+}
+.slidingText{
+  position: absolute;
+  z-index:-2;
+  font-size: 50vh;
+  bottom: 350px;
+  right:0px;
+  /* top:0px; */
+  width:50%;
+  white-space: nowrap;
+  color: #A6489C;
+  opacity:0.5;
+  text-transform:uppercase;
+  text-shadow:0 5px 10px rgba(0,0,0,1);
+mix-blend-mode: soft-light;
+  /* width: 10%; */
+  font-weight: bold;
+}
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+const layer: React.CSSProperties = {
+    position: "absolute";
+    top: 0;
+    right:0;
+    bottom: 0;
+    display: flex;
+    justifyContent: start;
+    alignItems: center;
+    gap: 20,
+}
+
+const boxContainer: React.CSSProperties = {
+    display: flex;
+    flex-direction:colum;
+    justifyContent: end;
+    alignItems: center;
+    gap: 50;
+    flexWrap: wrap;
+}
